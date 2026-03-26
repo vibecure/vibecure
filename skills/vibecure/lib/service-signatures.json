@@ -1,0 +1,166 @@
+{
+  "domains": {
+    "sms": {
+      "imports": [
+        "twilio",
+        "messagebird",
+        "plivo",
+        "@vonage/server-sdk",
+        "nexmo",
+        "@sinch/sdk-core",
+        "@telnyx/telnyx-node"
+      ],
+      "providers": {
+        "twilio": "twilio",
+        "messagebird": "messagebird",
+        "plivo": "plivo",
+        "vonage": "@vonage/server-sdk",
+        "nexmo": "nexmo",
+        "sinch": "@sinch/sdk-core",
+        "telnyx": "@telnyx/telnyx-node"
+      }
+    },
+    "email": {
+      "imports": [
+        "@sendgrid/mail",
+        "resend",
+        "nodemailer",
+        "@aws-sdk/client-ses",
+        "mailgun",
+        "postmark",
+        "@sendinblue/client",
+        "@mailchimp/mailchimp_transactional",
+        "google.gmail",
+        "smtp.gmail.com",
+        "smtp.google.com"
+      ],
+      "providers": {
+        "sendgrid": "@sendgrid/mail",
+        "resend": "resend",
+        "nodemailer": "nodemailer",
+        "ses": "@aws-sdk/client-ses",
+        "mailgun": "mailgun",
+        "postmark": "postmark",
+        "sendinblue": "@sendinblue/client",
+        "mandrill": "@mailchimp/mailchimp_transactional",
+        "gmail": "google.gmail",
+        "google-workspace-smtp": "smtp.google.com"
+      }
+    },
+    "llm": {
+      "imports": [
+        "openai",
+        "@anthropic-ai/sdk",
+        "@google/generative-ai",
+        "groq-sdk",
+        "@mistralai/mistralai",
+        "cohere-ai",
+        "replicate",
+        "@aws-sdk/client-bedrock-runtime",
+        "openrouter.ai"
+      ],
+      "providers": {
+        "openai": "openai",
+        "anthropic": "@anthropic-ai/sdk",
+        "gemini": "@google/generative-ai",
+        "groq": "groq-sdk",
+        "mistral": "@mistralai/mistralai",
+        "cohere": "cohere-ai",
+        "replicate": "replicate",
+        "bedrock": "@aws-sdk/client-bedrock-runtime",
+        "openrouter": "openrouter.ai"
+      }
+    },
+    "speech": {
+      "imports": [
+        "@deepgram/sdk",
+        "@google-cloud/speech",
+        "audio.transcriptions",
+        "assemblyai"
+      ],
+      "providers": {
+        "deepgram": "@deepgram/sdk",
+        "google-stt": "@google-cloud/speech",
+        "whisper": "audio.transcriptions",
+        "assemblyai": "assemblyai"
+      }
+    },
+    "translate": {
+      "imports": [
+        "@google-cloud/translate"
+      ],
+      "providers": {
+        "google-translate": "@google-cloud/translate"
+      }
+    }
+  },
+  "managedServices": [
+    {
+      "name": "firebase-phone-auth",
+      "imports": ["firebase"],
+      "contentMatch": ["signInWithPhoneNumber", "PhoneAuthProvider", "PhoneMultiFactorGenerator", "multiFactor"],
+      "skipChecks": ["no-rate-limit", "no-captcha", "no-phone-cooldown", "no-country-restriction"],
+      "platformHandled": ["no-rate-limit", "no-captcha", "no-phone-cooldown"],
+      "dashboardConfig": ["no-country-restriction"],
+      "devMustCode": []
+    },
+    {
+      "name": "firebase-admin-auth",
+      "imports": ["firebase-admin"],
+      "contentMatch": ["auth().createUser", "auth().getUserByPhoneNumber", "createSessionCookie"],
+      "skipChecks": ["no-rate-limit", "no-captcha", "no-phone-cooldown", "no-country-restriction"],
+      "platformHandled": ["no-rate-limit", "no-captcha", "no-phone-cooldown"],
+      "dashboardConfig": ["no-country-restriction"],
+      "devMustCode": []
+    },
+    {
+      "name": "cognito-sms-mfa",
+      "imports": ["@aws-sdk/client-cognito-identity-provider"],
+      "contentMatch": ["SMSMfaSettings", "SMS_MFA", "SignUpCommand", "InitiateAuthCommand", "ResendConfirmationCodeCommand", "ForgotPasswordCommand"],
+      "skipChecks": ["no-rate-limit", "no-captcha", "no-country-restriction"],
+      "platformHandled": [],
+      "dashboardConfig": ["no-rate-limit", "no-captcha", "no-country-restriction"],
+      "devMustCode": ["no-phone-cooldown"]
+    },
+    {
+      "name": "supabase-phone-auth",
+      "imports": ["@supabase/supabase-js"],
+      "contentMatch": ["auth.signInWithOtp", "auth.signUp", "auth.resend"],
+      "skipChecks": ["no-rate-limit", "no-phone-cooldown"],
+      "platformHandled": ["no-rate-limit", "no-phone-cooldown"],
+      "dashboardConfig": [],
+      "devMustCode": ["no-captcha", "no-country-restriction"]
+    },
+    {
+      "name": "supabase-mfa",
+      "imports": ["@supabase/supabase-js"],
+      "contentMatch": ["auth.mfa.enroll", "auth.mfa.challengeAndVerify"],
+      "skipChecks": ["no-rate-limit", "no-phone-cooldown"],
+      "platformHandled": ["no-rate-limit", "no-phone-cooldown"],
+      "dashboardConfig": [],
+      "devMustCode": ["no-captcha", "no-country-restriction"]
+    },
+    {
+      "name": "auth0-phone-auth",
+      "imports": ["auth0"],
+      "contentMatch": ["sendSMS", "loginWithSMS", "oobChannels", "guardian", "passwordless"],
+      "skipChecks": ["no-rate-limit", "no-phone-cooldown", "no-captcha"],
+      "platformHandled": ["no-rate-limit", "no-phone-cooldown"],
+      "dashboardConfig": ["no-captcha"],
+      "devMustCode": ["no-country-restriction"]
+    },
+    {
+      "name": "clerk-phone-auth",
+      "imports": ["@clerk"],
+      "contentMatch": ["smsMessages", "phone_code", "createPhoneNumber", "PhoneNumberVerification", "phone_number", "two_factor"],
+      "skipChecks": ["no-rate-limit", "no-captcha", "no-phone-cooldown", "no-country-restriction"],
+      "platformHandled": ["no-rate-limit", "no-captcha", "no-phone-cooldown", "no-country-restriction"],
+      "dashboardConfig": [],
+      "devMustCode": []
+    }
+  ],
+  "platformFiles": {
+    "Procfile": "heroku",
+    "vercel.json": "vercel"
+  }
+}

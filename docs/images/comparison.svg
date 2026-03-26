@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="vc-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="340" rx="12" fill="#0d1117"/>
+  <rect x="1" y="1" width="818" height="338" rx="11" fill="none" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="410" y="38" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">Checks Passed — AI-Generated Node.js/Express Backends</text>
+  <text x="410" y="56" text-anchor="middle" fill="#7d8590" font-size="11">Tested across 7 frontier models · Same prompts · Same detectors</text>
+
+  <!-- Column headers -->
+  <text x="420" y="88" text-anchor="middle" fill="#7d8590" font-size="12" font-weight="600">No Rules</text>
+  <text x="570" y="88" text-anchor="middle" fill="#7d8590" font-size="12" font-weight="600">Generic Rules</text>
+  <text x="735" y="88" text-anchor="middle" fill="url(#vc-grad)" font-size="13" font-weight="700">VibeCure</text>
+
+  <!-- Divider line -->
+  <line x1="30" y1="98" x2="790" y2="98" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Row 1: Abuse & cost protection -->
+  <text x="40" y="130" fill="#e6edf3" font-size="13" font-weight="600">Abuse &amp; cost protection</text>
+  <text x="40" y="146" fill="#7d8590" font-size="10">Rate limiting · CAPTCHA · quotas · phone restrictions</text>
+
+  <!-- No Rules: 0/37 -->
+  <rect x="380" y="117" width="80" height="24" rx="4" fill="#da36361a"/>
+  <text x="420" y="134" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">0 / 37</text>
+
+  <!-- Generic: 6/37 -->
+  <rect x="530" y="117" width="80" height="24" rx="4" fill="#da36361a"/>
+  <text x="570" y="134" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">6 / 37</text>
+
+  <!-- VibeCure: 37/37 -->
+  <rect x="695" y="117" width="80" height="24" rx="4" fill="#23883218"/>
+  <text x="735" y="134" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">37 / 37</text>
+
+  <!-- Row 2: Hardcoded API keys -->
+  <text x="40" y="190" fill="#e6edf3" font-size="13" font-weight="600">Hardcoded API keys</text>
+  <text x="40" y="206" fill="#7d8590" font-size="10">Secrets left in source code across 15 services</text>
+
+  <!-- No Rules: 0/15 -->
+  <rect x="380" y="177" width="80" height="24" rx="4" fill="#da36361a"/>
+  <text x="420" y="194" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">0 / 15</text>
+
+  <!-- Generic: 9/15 -->
+  <rect x="530" y="177" width="80" height="24" rx="4" fill="#db6d2818"/>
+  <text x="570" y="194" text-anchor="middle" fill="#d29922" font-size="13" font-weight="700">9 / 15</text>
+
+  <!-- VibeCure: 15/15 -->
+  <rect x="695" y="177" width="80" height="24" rx="4" fill="#23883218"/>
+  <text x="735" y="194" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">15 / 15</text>
+
+  <!-- Row 3: Sensitive data handling -->
+  <text x="40" y="250" fill="#e6edf3" font-size="13" font-weight="600">Sensitive data handling</text>
+  <text x="40" y="266" fill="#7d8590" font-size="10">Password hashing · SSN encryption · data exposure · reset tokens</text>
+
+  <!-- No Rules: 0/9 -->
+  <rect x="380" y="237" width="80" height="24" rx="4" fill="#da36361a"/>
+  <text x="420" y="254" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">0 / 9</text>
+
+  <!-- Generic: 0/9 -->
+  <rect x="530" y="237" width="80" height="24" rx="4" fill="#da36361a"/>
+  <text x="570" y="254" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">0 / 9</text>
+
+  <!-- VibeCure: 9/9 -->
+  <rect x="695" y="237" width="80" height="24" rx="4" fill="#23883218"/>
+  <text x="735" y="254" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">9 / 9</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="282" x2="790" y2="282" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="40" y="308" fill="#7d8590" font-size="11">Showing 3 of 14 security categories · 71+ automated checks total</text>
+  <text x="40" y="326" fill="#7d8590" font-size="10">Generic rules = Wiz AI Rules (closest competitor) · Full results at vibecure.ai</text>
+</svg>

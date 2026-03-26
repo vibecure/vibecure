@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <defs>
+    <linearGradient id="pulse-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+      <stop offset="40%" style="stop-color:#3b82f6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- Pulse line that becomes a checkmark -->
+  <path d="M 8 50 L 24 50 L 32 30 L 42 70 L 50 42 L 56 58 L 62 50 L 70 50 L 76 58 L 84 38"
+        stroke="url(#pulse-grad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Brand text -->
+  <text x="100" y="62" font-family="'SF Mono','JetBrains Mono',monospace" font-size="42" font-weight="800" fill="#e2e8f0">Vibe<tspan fill="#3b82f6">Cure</tspan></text>
+  <text x="332" y="62" font-family="'SF Mono','JetBrains Mono',monospace" font-size="42" font-weight="400" fill="#64748b">.ai</text>
+</svg>

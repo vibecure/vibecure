@@ -1,0 +1,28 @@
+{
+  "name": "vibecure",
+  "version": "0.5.0",
+  "description": "Security scanning skill for AI coding assistants — detects paid endpoint abuse (EDoS) across SMS, Email, LLM, and Speech integrations. 15 checks, 22+ providers.",
+  "keywords": [
+    "security",
+    "ai",
+    "claude-code",
+    "cursor",
+    "copilot",
+    "windsurf",
+    "vibe-coding",
+    "agent-skills",
+    "edos",
+    "rate-limiting",
+    "sms-pumping",
+    "api-security",
+    "nodejs",
+    "express",
+    "owasp"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibecure/vibecure"
+  },
+  "homepage": "https://vibecure.ai"
+}
