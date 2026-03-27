@@ -1,0 +1,20 @@
+name: Publish to Tessl
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/vibecure/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skills/vibecure
+    steps:
+      - uses: actions/checkout@v4
+      - uses: tesslio/setup-tessl@v2
+        with:
+          token: ${{ secrets.TESSL_TOKEN }}
+      - run: tessl tile lint
+      - run: tessl tile publish
