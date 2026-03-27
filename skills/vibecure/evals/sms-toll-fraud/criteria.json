@@ -1,0 +1,31 @@
+{
+  "context": "A public SMS verification microservice using Twilio with no authentication. The app sends OTP codes to any phone number without country restriction, cooldown, rate limiting, or bot protection. Twilio credentials are hardcoded in source.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "description": "Fixed code validates phone number country/region before sending SMS \u2014 blocks premium-rate international numbers",
+      "name": "Country restriction added",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code enforces a per-phone-number time delay between SMS sends (e.g., 60 second cooldown map)",
+      "name": "Phone cooldown implemented",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code applies rate limiting middleware (express-rate-limit or equivalent) to the /api/send-code endpoint",
+      "name": "Rate limiting on send endpoint",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code adds server-side CAPTCHA verification (Turnstile, reCAPTCHA, or hCaptcha siteverify call) before the SMS send",
+      "name": "Bot protection on public endpoint",
+      "max_score": 1
+    },
+    {
+      "description": "Twilio Account SID and Auth Token are no longer hardcoded in source \u2014 replaced with process.env references",
+      "name": "Hardcoded credentials removed",
+      "max_score": 1
+    }
+  ]
+}

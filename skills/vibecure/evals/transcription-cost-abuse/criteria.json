@@ -1,0 +1,31 @@
+{
+  "context": "A public audio transcription service using OpenAI Whisper with no authentication. Accepts any file upload with no size limit, no type validation, no duration check, and no rate limiting. OpenAI API key is hardcoded in source.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "description": "Fixed code configures multer with a fileSize limit (e.g., 25MB) on the upload endpoint",
+      "name": "File size limit enforced",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code validates uploaded file MIME type \u2014 only accepts audio formats (audio/wav, audio/mpeg, etc.) and rejects non-audio files",
+      "name": "File type validation added",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code checks audio file duration before sending to Whisper API \u2014 rejects files exceeding a maximum duration",
+      "name": "Audio duration check added",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code applies rate limiting middleware to the /api/transcribe endpoint",
+      "name": "Rate limiting on transcribe endpoint",
+      "max_score": 1
+    },
+    {
+      "description": "OpenAI API key is no longer hardcoded in source \u2014 replaced with process.env.OPENAI_API_KEY",
+      "name": "Hardcoded API key removed",
+      "max_score": 1
+    }
+  ]
+}

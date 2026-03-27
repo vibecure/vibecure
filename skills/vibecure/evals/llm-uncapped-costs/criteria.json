@@ -1,0 +1,31 @@
+{
+  "context": "A public AI chat widget backend using OpenAI with no authentication. All endpoints are public-facing. No max_tokens cap, no input validation, no rate limiting, no bot protection. OpenAI API key is hardcoded in source.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "description": "Fixed code sets max_tokens (or max_completion_tokens) to a reasonable value (4096 or less) in the OpenAI API call",
+      "name": "max_tokens cap set",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code validates input message length before sending to OpenAI \u2014 rejects oversized prompts with a character or token limit",
+      "name": "Input length validation added",
+      "max_score": 1
+    },
+    {
+      "description": "Fixed code applies rate limiting middleware to the /api/chat endpoint",
+      "name": "Rate limiting on chat endpoint",
+      "max_score": 1
+    },
+    {
+      "description": "Scanner flags the public LLM endpoint as needing authentication, and either adds auth middleware or documents it as a finding",
+      "name": "Authentication recommended or added",
+      "max_score": 1
+    },
+    {
+      "description": "OpenAI API key is no longer hardcoded in source \u2014 replaced with process.env.OPENAI_API_KEY",
+      "name": "Hardcoded API key removed",
+      "max_score": 1
+    }
+  ]
+}

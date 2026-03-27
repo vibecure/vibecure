@@ -1,0 +1,1 @@
+Detect and fix uncapped AI costs on public LLM endpoints — missing max_tokens, input validation, authentication, and rate limiting

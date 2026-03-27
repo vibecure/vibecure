@@ -1,0 +1,1 @@
+Detect and fix SMS toll fraud vulnerabilities — missing country restriction, phone cooldown, rate limiting, and bot protection on public SMS endpoints

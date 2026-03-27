@@ -1,0 +1,1 @@
+Detect and fix transcription cost abuse — missing file size limits, file type validation, duration checks, and rate limiting on audio upload endpoints
