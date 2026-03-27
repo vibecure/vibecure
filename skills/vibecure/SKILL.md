@@ -15,11 +15,18 @@ Scans Node.js/Express backends for abuse and cost vulnerabilities on paid API en
 
 ## Activation
 
-- User says `/vibecure`, "run vibecure", "security scan", "check for abuse"
-- Asks to scan, audit, or review security
-- Asks about rate limiting, abuse protection, cost controls, or quotas
-- Mentions SMS pumping, LLM costs, email abuse, AI/LLM abuse, or API abuse
-- Mentions VibeCure by name
+- User says `/vibecure`, "run vibecure", or mentions VibeCure by name
+- Asks to scan, audit, or review security on a Node.js or Express backend
+- Asks about rate limiting, abuse protection, bot protection, cost controls, or quotas
+- Mentions billing risks, billing attacks, EDoS, or cost overruns
+- Mentions SMS pumping, SMS toll fraud, LLMjacking, email bombing, uncapped AI costs, or API abuse
+- Asks about credential leaks, hardcoded API keys, or unprotected endpoints
+- Mentions broken authentication, identity spoofing, or registration abuse
+
+Do NOT activate for:
+- Python, Go, Ruby, or other non-JavaScript backends
+- Frontend-only code (React, Vue, Angular, Svelte)
+- General code review unrelated to external service or third-party API integration
 
 ## Workflow
 
