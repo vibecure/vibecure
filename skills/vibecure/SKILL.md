@@ -1,11 +1,11 @@
 ---
 name: vibecure
 description: >
-  Scans Node.js/Express backends for paid endpoint abuse and billing attacks (EDoS).
-  15 checks across SMS, Email, and AI/LLM domains. Finds uncapped AI costs, missing
-  rate limits, bot protection, user quotas, SMS toll fraud, credential leaks. Detects
-  Twilio, SendGrid, OpenAI + 19 more providers. Use when user asks to scan, audit,
-  review security, or mentions VibeCure.
+  Security scanner for Node.js/Express backends — detects paid endpoint abuse and
+  billing attacks (EDoS). 15 checks across SMS, Email, and AI/LLM domains. Finds
+  uncapped AI costs, missing rate limits, bot protection, user quotas, SMS toll fraud,
+  credential leaks. Detects Twilio, SendGrid, OpenAI + 19 more providers. Use when
+  user asks to scan, audit, review security, or mentions VibeCure.
 license: MIT
 ---
 
