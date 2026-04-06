@@ -17,4 +17,4 @@ jobs:
         with:
           token: ${{ secrets.TESSL_TOKEN }}
       - run: tessl tile lint
-      - run: tessl tile publish
+      - run: tessl tile publish --bump patch
