@@ -1,27 +1,28 @@
 ---
 name: vibecure
 description: >
-  Security scanner for Node.js/Express backends — finds and fixes paid endpoint
-  vulnerabilities and billing attack surfaces (EDoS). 15 checks across SMS, Email, and AI/LLM domains. Finds
-  uncapped AI costs, missing rate limits, bot protection, user quotas, SMS toll fraud,
-  credential leaks. Detects Twilio, SendGrid, OpenAI + 19 more providers. Use when
-  user asks to scan, audit, review security, or mentions VibeCure.
+  Scan Node.js backends for missing rate limits, bot protection, and spending
+  caps on Twilio, SendGrid, OpenAI, and 19+ more paid APIs. Detects which
+  services your code uses, checks for security gaps that let bots or bad actors
+  run up your bill, and fixes them. Use when the user mentions rate limiting,
+  bot protection, API costs, securing a paid API like Twilio/SendGrid/OpenAI,
+  or asks to scan for security issues on endpoints that cost money.
 license: MIT
 ---
 
 # VibeCure Security Scanner
 
-Scans Node.js/Express backends for abuse and cost vulnerabilities on paid API endpoints. Code-based service detection (instant) + LLM analysis of all checks (reads actual code, verifies wiring, evaluates thresholds).
+Scans Node.js/Express backends for missing protections on APIs that cost you money — Twilio, SendGrid, OpenAI, and 19+ more. Detects your services automatically, checks for gaps, and fixes them.
 
 ## Activation
 
 - User says `/vibecure`, "run vibecure", or mentions VibeCure by name
-- Asks to scan, audit, or review security on a Node.js or Express backend
-- Asks about rate limiting, abuse protection, bot protection, cost controls, or quotas
-- Mentions billing risks, billing attacks, EDoS, or cost overruns
-- Mentions SMS pumping, SMS toll fraud, LLMjacking, email bombing, uncapped AI costs, or API abuse
-- Asks about credential leaks, hardcoded API keys, or unprotected endpoints
-- Mentions broken authentication, identity spoofing, or registration abuse
+- Asks to add rate limiting or bot protection to an endpoint
+- Asks about protecting Twilio, SendGrid, OpenAI, or another paid API
+- Mentions API costs, unexpected bills, or spending limits
+- Asks to scan or check security on a Node.js/Express backend
+- Mentions bots hitting an endpoint, spam, or someone abusing an API
+- Asks about hardcoded API keys or unprotected endpoints
 
 Do NOT activate for:
 - Python, Go, Ruby, or other non-JavaScript backends
